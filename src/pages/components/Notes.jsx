@@ -1,4 +1,4 @@
-function Notes({ notes }) {
+export default function Notes({ notes }) {
     return (
         <ul className="list-group">
             {notes.map(note => (
@@ -6,7 +6,12 @@ function Notes({ notes }) {
                     className="list-group-item d-flex justify-content-between"
                     key={note.id}
                 >
-                    {note.title}
+                    <div>
+                        <strong style={{ paddingRight: "10px" }}>
+                            {note.title}
+                        </strong>
+                        <small>{note.date}</small>
+                    </div>
                     <button
                         type="button"
                         className="btn btn-outline-danger btn-sm "
@@ -18,5 +23,3 @@ function Notes({ notes }) {
         </ul>
     );
 }
-
-export default Notes;

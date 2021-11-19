@@ -12,7 +12,7 @@ function Alert() {
                 alert.type || "warning"
             } alert-dismissible`}
         >
-            <strong>Attention </strong>
+            <strong>Attention&nbsp;</strong>
             {alert.text}
             <button
                 type="button"
